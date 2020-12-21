@@ -1,5 +1,9 @@
 Sandbox for histology analysis. Especially digital whole slide image (wsi) analysis.
 
+# Important Note
+
+Publicly in development. Does not work yet. Do not expect this to work.
+
 # Example tiling on TGCA data
 
 ## TGCA data
@@ -13,3 +17,8 @@ Using [PyHist](https://github.com/manuel-munoz-aguirre/PyHIST#usescript).
 docker run -v /home/crary1/Desktop/histo/data/gdc_download_20201221_170103.568162/images/:/pyhist/images/ mmunozag/pyhist --save-tilecrossed-image --output images/ images/TCGA-28-1751-01A-01-BS1.71120b58-ac86-4c99-bf81-73d8c08ac74d.svs
 
 docker run -v /home/crary1/Desktop/histo/data/gdc_download_20201221_170103.568162/images/:/pyhist/images/ mmunozag/pyhist --npatches 10 --save-patches --output images/ images/TCGA-28-1751-01A-01-BS1.71120b58-ac86-4c99-bf81-73d8c08ac74d.svs
+
+## img2vec
+
+docker build . --tag img2vecdocker
+docker run -ti --name img2vecdocker
