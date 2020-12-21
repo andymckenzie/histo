@@ -17,6 +17,8 @@ ADD ./requirements.txt /usr/src/app/requirements.txt
 ADD ./hist_img2vec.py /usr/src/app/hist_img2vec.py
 ADD ./test /usr/src/app
 
+RUN ["chmod", "+x", "/usr/src/app/hist_img2vec.py"]
+
 RUN pip3 install --upgrade pip
 
 RUN pip3 install -r requirements.txt
