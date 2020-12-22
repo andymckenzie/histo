@@ -17,6 +17,7 @@ Using [PyHist](https://github.com/manuel-munoz-aguirre/PyHIST#usescript).
 Set directory variables for TGCA data. The folder of the image needs to be converted to "images." 
 
 mydir='SET_DIRECTORY_NAME_HERE'
+
 fulldir=$my_dir'gdc_download_20201221_170103.568162/images/'
 
 docker run -v $fulldir:/pyhist/images/ mmunozag/pyhist --save-tilecrossed-image --output images/ images/TCGA-28-1751-01A-01-BS1.71120b58-ac86-4c99-bf81-73d8c08ac74d.svs
