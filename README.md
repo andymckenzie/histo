@@ -14,9 +14,14 @@ Downloaded example WSI GBM data from [TGCA](https://portal.gdc.cancer.gov/legacy
 
 Using [PyHist](https://github.com/manuel-munoz-aguirre/PyHIST#usescript).
 
-docker run -v /home/crary1/Desktop/histo/data/gdc_download_20201221_170103.568162/images/:/pyhist/images/ mmunozag/pyhist --save-tilecrossed-image --output images/ images/TCGA-28-1751-01A-01-BS1.71120b58-ac86-4c99-bf81-73d8c08ac74d.svs
+Set directory variables for TGCA data. The folder of the image needs to be converted to "images." 
 
-docker run -v /home/crary1/Desktop/histo/data/gdc_download_20201221_170103.568162/images/:/pyhist/images/ mmunozag/pyhist --npatches 10 --save-patches --output images/ images/TCGA-28-1751-01A-01-BS1.71120b58-ac86-4c99-bf81-73d8c08ac74d.svs
+mydir='SET_DIRECTORY_NAME_HERE'
+fulldir=$my_dir'gdc_download_20201221_170103.568162/images/'
+
+docker run -v $fulldir:/pyhist/images/ mmunozag/pyhist --save-tilecrossed-image --output images/ images/TCGA-28-1751-01A-01-BS1.71120b58-ac86-4c99-bf81-73d8c08ac74d.svs
+
+docker run -v $fulldir:/pyhist/images/ mmunozag/pyhist --npatches 10 --save-patches --output images/ images/TCGA-28-1751-01A-01-BS1.71120b58-ac86-4c99-bf81-73d8c08ac74d.svs
 
 ## img2vec
 
