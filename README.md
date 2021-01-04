@@ -8,7 +8,7 @@ Publicly in development. Does not work yet. Do not expect this to work.
 
 Downloaded the TCGA data using the download data transfer tool available at: https://docs.gdc.cancer.gov/Data_Transfer_Tool/Users_Guide/Getting_Started/
 
-/Users/mckena01/Documents/histo/gdc-client download -m
+/Users/mckena01/Documents/histo/gdc-client download -m /Users/mckena01/Documents/histo/gdc_manifest.2020-12-28_gbm_top_10.txt
 
 ## TCGA data
 
@@ -32,7 +32,7 @@ docker run -v $fulldir:/pyhist/images/ mmunozag/pyhist --npatches 10 --save-patc
 
 docker run -v /Volumes/My_Passport_for_Mac/tcga/images/:/pyhist/images/ mmunozag/pyhist --save-tilecrossed-image --npatches 20 --method "otsu" --patch-size 1024 --save-patches --output-downsample 1 --output images/ images/TCGA-CS-6186-01Z-00-DX1.0CF5363F-B6E6-459C-93FD-0BE69F18A51B.svs
 
-FYI: this takes a 346 MB SVS file and turns it into a 2.56 GB folder of .png images. It won't be the same ratio for each .svs image, because it depends on how much of the slide has enough tissue on it. The content threshold default is 0.5. 
+FYI: this takes a 346 MB SVS file and turns it into a 2.56 GB folder of .png images. It won't be the same ratio for each .svs image, because it depends on how much of the slide has enough tissue on it. The content threshold default is 0.5.
 
 ## img2vec
 
