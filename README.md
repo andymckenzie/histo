@@ -2,7 +2,7 @@ Sandbox for histology analysis. Especially digital whole slide image (wsi) analy
 
 # Important Note
 
-Publicly in development. Does not work yet. Do not expect this to work.
+Publicly in development. Does not work yet. Do not expect this to work. Comes with no warranty whatsoever. 
 
 # Example tiling on TCGA data
 
